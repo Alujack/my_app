@@ -69,7 +69,7 @@ class Section extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                   child: Image.asset(
                     'assets/images/crop.png',
-                    height: 100,
+                    height: 95,
                     width: 190,
                     fit: BoxFit.cover,
                   ),

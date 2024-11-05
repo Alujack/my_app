@@ -38,7 +38,7 @@ class ShopPage extends StatelessWidget {
               // Top Season Products section
               const SectionHeader(title: 'Top Season Products'),
               SizedBox(
-                height: 270,
+                height: 275,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: 5,
@@ -53,7 +53,7 @@ class ShopPage extends StatelessWidget {
               // Recommended Products section
               const SectionHeader(title: 'Recommended Products'),
               SizedBox(
-                height: 270,
+                height: 275,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: 5,
@@ -174,7 +174,7 @@ class ProductCard extends StatelessWidget {
                 'Price',
                 style: TextStyle(fontSize: 14, color: Colors.grey),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(width: 15),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -190,7 +190,7 @@ class ProductCard extends StatelessWidget {
                       child: const Text('See Detail'),
                     ),
                   ),
-                  const SizedBox(width: 4),
+                  const SizedBox(width: 15),
                   Expanded(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
