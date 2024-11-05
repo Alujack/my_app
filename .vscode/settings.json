@@ -1,0 +1,5 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "cmake.sourceDirectory": "D:/freelance/my_app/linux",
+    "dotnet.defaultSolution": "build/windows/my_app.sln"
+}
