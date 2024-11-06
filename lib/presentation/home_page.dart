@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/search.dart';
+import '../widgets/popup_select_laguage.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,6 +13,15 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             const SearchWidget(hintText: 'Search FarmLink'),
+            const SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
+                // Show the language selection popup
+                showLanguageSelectionPopup(context);
+              },
+              child: const Text('Select Language'),
+            ),
+            const SizedBox(height: 8),
             Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
@@ -64,41 +74,44 @@ class HomePage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              IconButton(
-                                icon: const Icon(Icons.thumb_up),
-                                onPressed: () {},
-                              ),
-                              const Text(
-                                'ចូលចិត្ត',
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ]),
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.thumb_up),
+                              onPressed: () {},
+                            ),
+                            const Text(
+                              'ចូលចិត្ត',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              IconButton(
-                                icon: const Icon(Icons.comment),
-                                onPressed: () {},
-                              ),
-                              const Text(
-                                'បញ្ចេញមតិ',
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ]),
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.comment),
+                              onPressed: () {},
+                            ),
+                            const Text(
+                              'បញ្ចេញមតិ',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              IconButton(
-                                icon: const Icon(Icons.share),
-                                onPressed: () {},
-                              ),
-                              const Text(
-                                'ចែករំលែក',
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ])
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.share),
+                              onPressed: () {},
+                            ),
+                            const Text(
+                              'ចែករំលែក',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ],
