@@ -1,5 +1,6 @@
 // lib/widgets/header.dart
 import 'package:flutter/material.dart';
+import '../presentation/profile.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
   const Header({super.key});
@@ -21,7 +22,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
               color: Colors.black,
             ),
             onPressed: () {
-              // Add menu functionality here
+              showCustomDrawer(context);
             },
           ),
           title: const Text(
@@ -58,6 +59,20 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
           ],
         ),
       ],
+    );
+  }
+
+  void showCustomDrawer(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return Dialog(
+          insetPadding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * 0.125),
+          backgroundColor: Colors.transparent,
+          child: const CustomDrawer(),
+        );
+      },
     );
   }
 }

@@ -17,7 +17,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
-  // List of pages to navigate between
+
   final List<Widget> _pages = [
     const HomePage(),
     const NewsPage(),
@@ -35,7 +35,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const Header(),
-      body: _pages[_currentIndex], // Display selected page
+      body: _pages[_currentIndex],
       bottomNavigationBar: Navbar(
         currentIndex: _currentIndex,
         onTabTapped: onTabTapped,
