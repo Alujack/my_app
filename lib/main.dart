@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/presentation/home.dart';
+import 'package:my_app/presentation/home_page.dart';
+import 'package:my_app/presentation/login.dart';
 import 'presentation/initial.dart';
 
 void main() {
@@ -10,8 +13,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MainPage(),
+    return  MaterialApp(
+      home: LoginScreen(),
     );
   }
 }
